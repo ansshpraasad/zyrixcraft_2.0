@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" crossorigin />
+    
+    <!-- Favicon with WebP format -->
+    <link rel="icon" type="image/webp" href="./src/assets/Minimalist Z with Digital Element.webp" />
+    <link rel="apple-touch-icon" href="./src/assets/Minimalist Z with Digital Element.webp" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Zyrixcraft - Professional Web Development & Digital Solutions</title>
+    <meta name="description" content="Zyrixcraft offers professional web development, digital solutions, and innovative technology services. Transform your digital presence with our expert team." />
+    <meta name="keywords" content="web development, digital solutions, technology services, professional websites, web design, Zyrixcraft, UI/UX design, digital transformation, web solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Zyrixcraft" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zyrixcraft.com/" />
+    <meta property="og:title" content="Zyrixcraft - Professional Web Development & Digital Solutions" />
+    <meta property="og:description" content="Transform your digital presence with Zyrixcraft's professional web development and technology services." />
+    <meta property="og:image" content="/src/assets/Minimalist Z with Digital Element.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://zyrixcraft.com/" />
+    <meta name="twitter:title" content="Zyrixcraft - Professional Web Development & Digital Solutions" />
+    <meta name="twitter:description" content="Transform your digital presence with Zyrixcraft's professional web development and technology services." />
+    <meta name="twitter:image" content="./src/assets/Minimalist Z with Digital Element.png" />
+    
+    <!-- Resource optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Critical CSS inline for faster render -->
+    <style>
+      /* Critical path CSS */
+      :root { font-family: 'Inter', sans-serif; }
+      body { margin: 0; padding: 0; }
+      #root { min-height: 100vh; }
+    </style>
+    
+    <!-- Performance headers -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline' https:;" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zyrixcraft",
+      "description": "Professional web development and digital solutions provider",
+      "image": "/src/assets/ZyrixcraftLogo.webp",
+      "url": "https://zyrixcraft.com",
+      "sameAs": [
+        "https://www.instagram.com/zyrixcraft",
+        "https://x.com/zyrixcraft",
+        "https://www.linkedin.com/company/zyrixcraft"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9711625392",
+        "contactType": "customer service",
+        "email": "zyrixcraft@gmail.com",
+        "availableLanguage": ["English"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What services does Zyrixcraft offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zyrixcraft offers comprehensive digital solutions including web development, UI/UX design, graphic design, and digital strategy services."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can I contact Zyrixcraft?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach us at +91 9711625392, email us at zyrixcraft@gmail.com, or connect with us on social media platforms like Instagram, Twitter, and LinkedIn."
+        }
+      }]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this application.</noscript>
+    <!-- Deferred non-critical scripts -->
+    <script type="module" src="/src/main.tsx" defer></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('SW registered:', registration);
+          }).catch(error => {
+            console.log('SW registration failed:', error);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
